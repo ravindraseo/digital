@@ -14,7 +14,7 @@ function Logo() {
 
       <div className="logo-text">
         <strong>
-          Digital <b>Ravindraa</b>
+          Digital <b>Ravindra</b>
         </strong>
         <small>Your Growth, Our Digital Strategy</small>
       </div>
