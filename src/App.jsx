@@ -173,7 +173,7 @@ function App() {
           <Logo />
 
           <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>
-            <a href="#home" onClick={closeMenu}>Home</a>
+            <a href="#" onClick={closeMenu}>Home</a>
             <a href="#about" onClick={closeMenu}>About</a>
             <a href="#services" onClick={closeMenu}>Services</a>
             <a href="#portfolio" onClick={closeMenu}>Portfolio</a>
