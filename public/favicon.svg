@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
-<<<<<<< HEAD
     <!-- Background Gradient (Dark Navy) -->
     <linearGradient id="dr-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0a192f"/>
@@ -39,19 +38,3 @@
     <path d="M 32 17 L 43.5 17 C 49 17 52 19.5 52 24.5 C 52 28.5 49.5 31.5 45.5 32.5 L 53 47 L 46.5 47 L 39.8 33.5 L 37.8 33.5 L 37.8 47 L 32 47 Z M 37.8 22.5 L 37.8 28.5 L 42.5 28.5 C 45 28.5 46.5 27.2 46.5 25.5 C 46.5 23.8 45 22.5 42.5 22.5 Z" fill="url(#dr-orange)"/>
   </g>
 </svg>
-=======
-    <linearGradient id="dr-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a192f"/>
-      <stop offset="100%" stop-color="#102b4c"/>
-    </linearGradient>
-  </defs>
-  <!-- Background with smooth rounded corners -->
-  <rect width="64" height="64" rx="16" fill="url(#dr-bg)"/>
-  <!-- Subtle border for crisp definition -->
-  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="15.25" fill="none" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5"/>
-  <!-- DR Logo typography -->
-  <text x="32" y="44" font-family="'Poppins', 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="31" font-weight="900" text-anchor="middle" letter-spacing="-1">
-    <tspan fill="#ffffff">D</tspan><tspan fill="#ff5a1f" dx="-1">R</tspan>
-  </text>
-</svg>
->>>>>>> dd051080879a93b17d0e6f6937a35e94f4bcdcc1

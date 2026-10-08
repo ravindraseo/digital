@@ -2237,11 +2237,7 @@ button, input, select, textarea {
 /* Contact list with the exact same format and creative touch */
 .footer-contact-list li {
   display: flex;
-<<<<<<< HEAD
   align-items: flex-start;
-=======
-  align-items: center;
->>>>>>> dd051080879a93b17d0e6f6937a35e94f4bcdcc1
   gap: 8px;
   font-size: 13.5px;
   color: #94a3b8;
@@ -2253,10 +2249,7 @@ button, input, select, textarea {
   flex-shrink: 0;
   width: 18px;
   text-align: center;
-<<<<<<< HEAD
   margin-top: 1px;
-=======
->>>>>>> dd051080879a93b17d0e6f6937a35e94f4bcdcc1
 }
 
 .contact-prefix {
