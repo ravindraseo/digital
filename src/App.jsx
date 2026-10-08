@@ -1328,8 +1328,13 @@ function App() {
               </li>
               <li>
                 <span className="contact-bullet">📍</span>
+<<<<<<< HEAD
                 <span className="contact-prefix">Office Address:</span>
                 <span className="contact-text">Jamalpur, Andar, Siwan, Bihar, India</span>
+=======
+                <span className="contact-prefix">Base:</span>
+                <span className="contact-text">Delhi, India &amp; Serving Global Clients</span>
+>>>>>>> dd051080879a93b17d0e6f6937a35e94f4bcdcc1
               </li>
             </ul>
           </div>
