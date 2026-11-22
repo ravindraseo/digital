@@ -47,6 +47,8 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true, "max-image-preview": "large" } as Metadata["robots"],
   formatDetection: { telephone: true },
+  // Google Search Console ownership check.
+  verification: { google: "Nj2-LETEbEdfUmxiqTVpXrkBVcIFFUnnaXm_Ot7ptm4" },
 };
 
 export const viewport: Viewport = {
