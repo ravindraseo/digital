@@ -109,6 +109,33 @@ const steps = [
   { title: "Grow together", text: "Monthly reviews of enquiries and results, then the next step." },
 ];
 
+const pillars: { title: string; text: string; tags: string[]; href: string }[] = [
+  {
+    title: "Strategy & audit",
+    text: "We start with your numbers: where enquiries come from today, what competitors rank for, and what is quickest to fix.",
+    tags: ["Website audit", "Competitor research", "Keyword plan"],
+    href: "/seo-company-in-delhi",
+  },
+  {
+    title: "Search & local visibility",
+    text: "Get found on Google Search, Google Maps and AI answers by the people already looking for what you sell.",
+    tags: ["SEO", "Google Business Profile", "AI SEO"],
+    href: "/local-seo-services-in-delhi",
+  },
+  {
+    title: "Paid growth",
+    text: "Ads that bring enquiries this month, measured in calls and WhatsApp chats rather than clicks.",
+    tags: ["Google Ads", "Meta Ads", "WhatsApp marketing"],
+    href: "/google-ads-agency-in-delhi",
+  },
+  {
+    title: "Websites & apps",
+    text: "Fast, clear websites, stores and apps that turn visitors into customers, built with SEO from day one.",
+    tags: ["Business websites", "E-commerce", "Android & iOS"],
+    href: "/website-development-company-in-delhi",
+  },
+];
+
 const platforms = ["Google Search", "Google Business Profile", "Google Ads", "YouTube", "Meta", "Instagram", "LinkedIn", "WhatsApp Business", "Amazon Ads", "Shopify", "WordPress", "WooCommerce", "Laravel", "Wix", "ChatGPT", "Gemini"];
 
 const industries = ["Clinics and hospitals", "Real estate", "Coaching and education", "Restaurants and cafés", "E-commerce brands", "Manufacturers and B2B", "Salons and wellness", "CA, legal and finance", "Interior designers", "Retail showrooms", "Travel agencies", "Home services"];
@@ -136,6 +163,13 @@ export default function Home() {
     .map((h) => findByHref(h))
     .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
+  const stats = [
+    { value: "35+", label: "services under one roof" },
+    { value: String(rankings.items.length), label: "page-one Google keywords live for clients" },
+    { value: "4", label: "places we make you visible: Search, Maps, AI, social" },
+    { value: "0", label: "long-term lock-ins. Month to month." },
+  ];
+
   return (
     <>
       <JsonLd data={[webPageSchema({ title, description, href: "/", about: "Digital marketing agency in Delhi" }), faqSchema(faqs)]} />
@@ -143,6 +177,9 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-grid">
           <div>
+            <p className="hero-kicker">
+              <span className="live-dot" aria-hidden="true" /> Digital growth agency · East Delhi
+            </p>
             <span className="hand-note">Namaste Dilli! 👋</span>
             <h1>
               Digital marketing agency in Delhi that gets you found on{" "}
@@ -235,6 +272,17 @@ export default function Home() {
               </span>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="stats-band" aria-label="Digital Ravindra in numbers">
+        <div className="container stats-grid">
+          {stats.map((st) => (
+            <div key={st.label} className="stat">
+              <strong>{st.value}</strong>
+              <span>{st.label}</span>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -385,6 +433,40 @@ export default function Home() {
               AI-search optimisation and ads that pay for themselves. At every step you will see what we changed and the reason behind it.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="section approach" aria-labelledby="approach-title">
+        <div className="container">
+          <div className="approach-head">
+            <div>
+              <span className="eyebrow">How we work</span>
+              <h2 id="approach-title">One team for strategy, visibility, ads and build.</h2>
+            </div>
+            <p>
+              Most businesses hire three vendors and spend their time making them talk to each other. We plan and run
+              all four pieces together, so every rupee points at the same goal.
+            </p>
+          </div>
+          <ol className="pillars">
+            {pillars.map((p, i) => (
+              <li key={p.title}>
+                <Link href={p.href} className="pillar">
+                  <span className="pillar-num">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="pillar-main">
+                    <h3>{p.title}</h3>
+                    <p>{p.text}</p>
+                  </span>
+                  <span className="pillar-tags">
+                    {p.tags.map((t) => (
+                      <span key={t}>{t}</span>
+                    ))}
+                  </span>
+                  <span className="pillar-arrow" aria-hidden="true">→</span>
+                </Link>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
