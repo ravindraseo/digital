@@ -147,12 +147,14 @@ export default function Home() {
             <h1>
               Digital marketing agency in Delhi that gets you found on{" "}
               <span className="rotator" aria-hidden="true">
-                <span className="rotator-track">
-                  <span>Google</span>
-                  <span>Google Maps</span>
-                  <span>ChatGPT</span>
-                  <span>Instagram</span>
-                  <span>Google</span>
+                <span className="rotator-window">
+                  <span className="rotator-track">
+                    <span>Google</span>
+                    <span>Google Maps</span>
+                    <span>ChatGPT</span>
+                    <span>Instagram</span>
+                    <span>Google</span>
+                  </span>
                 </span>
                 <svg className="scribble" viewBox="0 0 220 16" preserveAspectRatio="none" aria-hidden="true">
                   <path d="M3 11 C 40 4, 90 3, 140 7 S 200 12, 217 5" stroke="#ff7539" strokeWidth="4" fill="none" strokeLinecap="round" />
