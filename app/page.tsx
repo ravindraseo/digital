@@ -184,6 +184,12 @@ export default function Home() {
           </div>
 
           <div className="mock" aria-hidden="true">
+            {hasPhoto && (
+              <figure className="hero-polaroid">
+                <Image src="/images/founder.jpg" alt="" width={180} height={180} priority />
+                <figcaption>Ravindra, that’s me :)</figcaption>
+              </figure>
+            )}
             <div className="mock-card">
               <div className="mock-search">
                 <Icon name="search" size={18} /> digital marketing agency near me
@@ -214,15 +220,12 @@ export default function Home() {
                 <span />
               </div>
             </div>
-            <div className="mock-ai">
-              <span className="mock-ai-head">
-                <Icon name="ai" size={16} /> AI answer
-              </span>
-              <p>
-                For a trusted option near New Ashok Nagar, consider <b>Your Business</b>: well reviewed, and quick to respond
-                on WhatsApp.
-              </p>
-            </div>
+            <p className="sticky-note">
+              No sales team here.
+              <br />
+              You WhatsApp me, I reply.
+              <span>— R.</span>
+            </p>
             <div className="mock-bubble">
               <span className="dot">
                 <Icon name="whatsapp" size={20} />
@@ -271,7 +274,7 @@ export default function Home() {
         <div className="container">
           <div className="section-head">
             <span className="eyebrow">What we do</span>
-            <h2>Pick what you need. We handle the rest.</h2>
+            <h2>Pick what you need. <span className="hl">We handle the rest.</span></h2>
             <p>Click a category to see every service inside it. Each one has its own detailed page with process, costs and FAQs.</p>
           </div>
           <ServiceTabs tabs={tabs} />
@@ -333,7 +336,7 @@ export default function Home() {
         <div className="container">
           <div className="section-head">
             <span className="eyebrow">Real results</span>
-            <h2 id="rankings-title">Page-one rankings we hold for clients</h2>
+            <h2 id="rankings-title">Page-one rankings <span className="hl">we hold for clients</span></h2>
             <p>
               Specific, high-intent keywords that bring calls, not vanity terms. These are live Google positions for
               accounting and tax clients across Delhi and Noida.
@@ -368,7 +371,7 @@ export default function Home() {
         <div className="container split">
           <div>
             <span className="eyebrow">Why businesses come to us</span>
-            <h2>Most local businesses don’t have a marketing problem. They have a visibility problem.</h2>
+            <h2>Most local businesses don’t have a marketing problem. They have a <span className="hl">visibility problem</span>.</h2>
           </div>
           <div className="prose">
             <p>
@@ -391,8 +394,9 @@ export default function Home() {
         <div className="container">
           <div className="section-head">
             <span className="eyebrow">Why Digital Ravindra</span>
-            <h2>A small team that treats your business like its own</h2>
+            <h2>A small team that treats your business <span className="hl">like its own</span></h2>
             <p>We would rather have fewer clients who stay for years than many who leave after three months.</p>
+            <p className="margin-note">psst… no long contracts either</p>
           </div>
           <div className="why-grid">
             {why.map((w) => (

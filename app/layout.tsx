@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Caveat, Plus_Jakarta_Sans, Poppins } from "next/font/google";
+import { Fraunces, Kalam, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -10,13 +10,15 @@ import { organizationSchema } from "@/lib/schema";
 import { site, waLink } from "@/lib/site";
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-body", display: "swap" });
-const poppins = Poppins({
+// Headings: a warm, slightly "inky" serif so the site reads like it was set by a person, not a template.
+const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: ["700", "800", "900"],
+  axes: ["SOFT", "opsz"],
   variable: "--font-head",
   display: "swap",
 });
-const caveat = Caveat({ subsets: ["latin"], weight: ["600"], variable: "--font-hand", display: "swap", preload: false });
+// Handwriting for margin notes; Kalam also covers Devanagari for the odd Hindi word.
+const kalam = Kalam({ subsets: ["latin", "devanagari"], weight: ["400", "700"], variable: "--font-hand", display: "swap", preload: false });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -61,7 +63,7 @@ const navLocations = [
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-IN" className={`${jakarta.variable} ${poppins.variable} ${caveat.variable}`}>
+    <html lang="en-IN" className={`${jakarta.variable} ${fraunces.variable} ${kalam.variable}`}>
       <body>
         <a href="#main" className="skip-link">
           Skip to content

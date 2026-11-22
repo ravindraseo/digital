@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { existsSync } from "node:fs";
 import path from "node:path";
@@ -65,7 +66,11 @@ export function ServicePage({ content: c, href, crumbs, hub }: Props) {
             <h1>{c.h1}</h1>
             <p className="lead">{c.lead}</p>
             <p className="byline">
-              By {site.founder} · Updated <time dateTime={CONTENT_UPDATED.iso}>{CONTENT_UPDATED.label}</time>
+              {hasPhoto && <Image src="/images/founder.jpg" alt="" width={36} height={36} className="byline-face" />}
+              <span>
+                <span className="byline-hand">written by {site.founder}</span>
+                Updated <time dateTime={CONTENT_UPDATED.iso}>{CONTENT_UPDATED.label}</time>
+              </span>
             </p>
             <div className="hero-actions">
               <a href={waLink(`Hi, I'm interested in ${c.name}. Can we talk?`)} className="btn btn-primary btn-lg" target="_blank" rel="noopener">
@@ -124,9 +129,9 @@ export function ServicePage({ content: c, href, crumbs, hub }: Props) {
             ))}
           </div>
           <div className="note-card">
-            <p className="note-hand">A quick note from us</p>
+            <p className="note-hand">A quick note from me</p>
             <p>
-              We’d rather start with a 15-minute chat than a sales pitch. Tell us what you sell and who buys it, and we’ll tell
+              I’d rather start with a 15-minute chat than a sales pitch. Tell me what you sell and who buys it, and I’ll tell
               you honestly whether {short.toLowerCase()} is the right next step.
             </p>
             <a href={waLink(`Hi, quick question about ${c.name}.`)} target="_blank" rel="noopener" className="link-arrow">
