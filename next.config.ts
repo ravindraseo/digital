@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   images: { qualities: [75, 90] },
   async redirects() {
     return [
+      // About and Contact moved to /about-us and /contact-us (Nov 2026)
+      { source: "/about", destination: "/about-us", permanent: true },
+      { source: "/contact", destination: "/contact-us", permanent: true },
       // Old nested service URLs -> keyword permalinks
       { source: "/social-media-marketing/online-reputation-management", destination: "/online-reputation-management-company-in-delhi", permanent: true },
       { source: "/web-development/ecommerce-website-development", destination: "/ecommerce-website-development-company-in-delhi", permanent: true },

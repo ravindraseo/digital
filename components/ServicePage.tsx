@@ -78,7 +78,7 @@ export function ServicePage({ content: c, href, crumbs, hub }: Props) {
               <a href={waLink(`Hi, I'm interested in ${c.name}. Can we talk?`)} className="btn btn-primary btn-lg" target="_blank" rel="noopener">
                 <Icon name="whatsapp" size={20} /> Talk about {short}
               </a>
-              <Link href="/contact" className="btn btn-light btn-lg">
+              <Link href="/contact-us" className="btn btn-light btn-lg">
                 Request a callback
               </Link>
             </div>

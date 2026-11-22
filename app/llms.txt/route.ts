@@ -27,8 +27,8 @@ export function GET() {
     "",
     "## Company",
     "",
-    `- [About](${absolute("/about")}): founded and run by ${site.founder} (${site.founderProfile.education}, ${site.founderProfile.graduated}; ${site.founderProfile.experienceYears} years in digital marketing and WordPress), who works hands-on on client SEO, Google Business Profile and ads.`,
-    `- [Contact](${absolute("/contact")}): ${site.hours}; office visits by appointment.`,
+    `- [About](${absolute("/about-us")}): founded and run by ${site.founder} (${site.founderProfile.education}, ${site.founderProfile.graduated}; ${site.founderProfile.experienceYears} years in digital marketing and WordPress), who works hands-on on client SEO, Google Business Profile and ads.`,
+    `- [Contact](${absolute("/contact-us")}): ${site.hours}; office visits by appointment.`,
     "- Working principles: no fake reviews, no paid-link schemes, no guaranteed rankings; clients own all their accounts; month-to-month plans.",
     "",
   );

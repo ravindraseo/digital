@@ -98,10 +98,10 @@ export function Footer() {
           <Col
             title="Company"
             links={[
-              { name: "About us", href: "/about" },
+              { name: "About us", href: "/about-us" },
               { name: "All services", href: "/services" },
               { name: "Blog", href: "/blog" },
-              { name: "Contact", href: "/contact" },
+              { name: "Contact", href: "/contact-us" },
             ]}
           />
         </div>

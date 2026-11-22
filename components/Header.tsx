@@ -20,9 +20,9 @@ type Props = {
 };
 
 const company: NavLink[] = [
-  { name: "About us", href: "/about" },
+  { name: "About us", href: "/about-us" },
   { name: "All services", href: "/services" },
-  { name: "Contact", href: "/contact" },
+  { name: "Contact", href: "/contact-us" },
   { name: "Privacy policy", href: "/privacy-policy" },
 ];
 
@@ -123,7 +123,7 @@ export function Header({ columns, locations, waHref, phone, phoneRaw, email, add
               </div>
             </div>
             <Link href="/blog">Blog</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact-us">Contact</Link>
           </nav>
 
           <div className="header-cta">
@@ -183,7 +183,7 @@ export function Header({ columns, locations, waHref, phone, phoneRaw, email, add
               ))}
             </details>
             <Link href="/blog" onClick={close}>Blog</Link>
-            <Link href="/contact" onClick={close}>Contact</Link>
+            <Link href="/contact-us" onClick={close}>Contact</Link>
             <a href={`tel:${phoneRaw}`} className="btn btn-ghost">
               Call {phone}
             </a>

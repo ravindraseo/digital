@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   title: "Contact Us — Free SEO & Marketing Audit",
   description:
     "Contact Digital Ravindra in New Ashok Nagar, East Delhi for a free audit of your website, Google Business Profile and marketing. Call, WhatsApp or visit us.",
-  alternates: { canonical: "/contact" },
-  openGraph: { url: "/contact", images: ogImages },
+  alternates: { canonical: "/contact-us" },
+  openGraph: { url: "/contact-us", images: ogImages },
 };
 
 const crumbs = [
   { name: "Home", href: "/" },
-  { name: "Contact", href: "/contact" },
+  { name: "Contact us", href: "/contact-us" },
 ];
 
 const faqs: FAQ[] = [
@@ -32,7 +32,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <JsonLd data={[webPageSchema({ title: "Contact Digital Ravindra", description: "Contact Digital Ravindra in New Ashok Nagar, East Delhi for a free audit of your website, Google Business Profile and marketing. Call, WhatsApp or visit us.", href: "/contact", about: "Contacting Digital Ravindra", type: "ContactPage" }), breadcrumbSchema(crumbs), faqSchema(faqs)]} />
+      <JsonLd data={[webPageSchema({ title: "Contact Digital Ravindra", description: "Contact Digital Ravindra in New Ashok Nagar, East Delhi for a free audit of your website, Google Business Profile and marketing. Call, WhatsApp or visit us.", href: "/contact-us", about: "Contacting Digital Ravindra", type: "ContactPage" }), breadcrumbSchema(crumbs), faqSchema(faqs)]} />
       <section className="page-hero">
         <div className="container">
           <Breadcrumbs items={crumbs} />

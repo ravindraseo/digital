@@ -94,7 +94,7 @@ export function organizationSchema() {
         name: site.founder,
         jobTitle: "Founder",
         image: absolute("/images/ravindra-founder-hd.jpg"),
-        url: absolute("/about"),
+        url: absolute("/about-us"),
         worksFor: { "@id": orgId },
         description: `Founder of ${site.name}, a digital marketing agency in New Ashok Nagar, Delhi. ${site.founderProfile.education} graduate (${site.founderProfile.graduated}) with ${site.founderProfile.experienceYears} years of experience in digital marketing and WordPress, working hands-on on SEO, Google Business Profile and Google and Meta ads.`,
         knowsAbout: [...site.founderProfile.skills, "Generative Engine Optimization"],

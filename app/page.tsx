@@ -544,7 +544,7 @@ export default function Home() {
               <a href={site.mapsUrl} className="btn btn-ghost" target="_blank" rel="noopener">
                 Get directions →
               </a>
-              <Link href="/about" className="btn btn-ghost">
+              <Link href="/about-us" className="btn btn-ghost">
                 About us →
               </Link>
             </div>

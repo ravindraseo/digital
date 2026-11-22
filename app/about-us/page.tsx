@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   title: { absolute: "About Digital Ravindra | Meet Founder Ravindra" },
   description:
     "Meet Digital Ravindra: a hands-on digital marketing team helping Delhi NCR businesses grow with honest SEO, ads, websites and apps.",
-  alternates: { canonical: "/about" },
-  openGraph: { url: "/about", images: ogImages },
+  alternates: { canonical: "/about-us" },
+  openGraph: { url: "/about-us", images: ogImages },
 };
 
 // Drop your photo at public/images/ravindra-founder-hd.jpg and it appears automatically.
@@ -22,7 +22,7 @@ const hasPhoto = existsSync(path.join(process.cwd(), "public", PHOTO));
 
 const crumbs = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "About us", href: "/about-us" },
 ];
 
 const values: { icon: IconName; title: string; text: string }[] = [
@@ -50,7 +50,7 @@ const faqs: FAQ[] = [
 export default function AboutPage() {
   return (
     <>
-      <JsonLd data={[webPageSchema({ title: "About Digital Ravindra | Meet Founder Ravindra", description: "Meet Digital Ravindra: a hands-on digital marketing team helping Delhi NCR businesses grow with honest SEO, ads, websites and apps.", href: "/about", about: "Digital Ravindra", type: "AboutPage" }), breadcrumbSchema(crumbs), faqSchema(faqs)]} />
+      <JsonLd data={[webPageSchema({ title: "About Digital Ravindra | Meet Founder Ravindra", description: "Meet Digital Ravindra: a hands-on digital marketing team helping Delhi NCR businesses grow with honest SEO, ads, websites and apps.", href: "/about-us", about: "Digital Ravindra", type: "AboutPage" }), breadcrumbSchema(crumbs), faqSchema(faqs)]} />
       <section className="page-hero">
         <div className="container">
           <Breadcrumbs items={crumbs} />

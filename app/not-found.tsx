@@ -11,7 +11,7 @@ export default function NotFound() {
           <p className="lead">The page you’re looking for doesn’t exist or has moved. Let’s get you back on track.</p>
           <div className="hero-actions">
             <Link href="/" className="btn btn-primary btn-lg">Back to home</Link>
-            <Link href="/contact" className="btn btn-light btn-lg">Contact us</Link>
+            <Link href="/contact-us" className="btn btn-light btn-lg">Contact us</Link>
           </div>
         </div>
       </section>
