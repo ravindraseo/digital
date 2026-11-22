@@ -13,12 +13,12 @@ const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-body",
 // Headings: a warm, slightly "inky" serif so the site reads like it was set by a person, not a template.
 const fraunces = Fraunces({
   subsets: ["latin"],
-  axes: ["SOFT", "opsz"],
+  axes: ["SOFT"],
   variable: "--font-head",
   display: "swap",
 });
 // Handwriting for margin notes; Kalam also covers Devanagari for the odd Hindi word.
-const kalam = Kalam({ subsets: ["latin", "devanagari"], weight: ["400", "700"], variable: "--font-hand", display: "swap", preload: false });
+const kalam = Kalam({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-hand", display: "swap", preload: false });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
