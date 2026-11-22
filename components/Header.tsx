@@ -63,6 +63,7 @@ export function Header({ columns, locations, waHref, phone, phoneRaw, email, add
           <Logo />
 
           <nav className="desktop-nav" aria-label="Main">
+            <Link href="/">Home</Link>
             <div className="nav-drop nav-drop--mega">
               <button type="button" className="nav-drop-trigger">
                 Services <span aria-hidden="true">▾</span>
