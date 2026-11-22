@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: { title: "Digital Ravindra: Digital Marketing Agency in Delhi", description, url: "/", images: ogImages },
 };
 
-const hasPhoto = existsSync(path.join(process.cwd(), "public", "images", "ravindra-founder.jpg"));
+const hasPhoto = existsSync(path.join(process.cwd(), "public", "images", "ravindra-founder-hd.jpg"));
 
 const faqs: FAQ[] = [
   {
@@ -223,7 +223,7 @@ export default function Home() {
           <div className="mock" aria-hidden="true">
             {hasPhoto && (
               <figure className="hero-polaroid">
-                <Image src="/images/ravindra-founder.jpg" alt="" width={180} height={180} priority />
+                <Image src="/images/ravindra-founder-hd.jpg" alt="" width={180} height={180} priority />
                 <figcaption>Ravindra, that’s me :)</figcaption>
               </figure>
             )}
@@ -519,7 +519,7 @@ export default function Home() {
         <div className="container split founder-split">
           <div className="founder-mini">
             {hasPhoto ? (
-              <Image src="/images/ravindra-founder.jpg" alt={`${site.founder}, founder of ${site.name}`} width={200} height={200} />
+              <Image src="/images/ravindra-founder-hd.jpg" alt={`${site.founder}, founder of ${site.name}`} width={200} height={200} />
             ) : (
               <span className="logo-symbol" aria-hidden="true">
                 <span className="logo-letter-d">D</span>

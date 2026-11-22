@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   openGraph: { url: "/about", images: ogImages },
 };
 
-// Drop your photo at public/images/ravindra-founder.jpg and it appears automatically.
-const PHOTO = "/images/ravindra-founder.jpg";
+// Drop your photo at public/images/ravindra-founder-hd.jpg and it appears automatically.
+const PHOTO = "/images/ravindra-founder-hd.jpg";
 const hasPhoto = existsSync(path.join(process.cwd(), "public", PHOTO));
 
 const crumbs = [
@@ -71,7 +71,7 @@ export default function AboutPage() {
                 src={PHOTO}
                 alt={`${site.founder}, founder of ${site.name}`}
                 fill
-                sizes="340px"
+                sizes="380px"
                 quality={90}
                 style={{ objectFit: "cover" }}
                 priority

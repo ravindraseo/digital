@@ -49,7 +49,7 @@ export default function ContactPage() {
         <div className="container contact-grid">
           <div className="contact-cards">
             <div className="contact-me">
-              <Image src="/images/ravindra-founder.jpg" alt={`${site.founder}, founder of ${site.name}`} width={88} height={88} quality={90} />
+              <Image src="/images/ravindra-founder-hd.jpg" alt={`${site.founder}, founder of ${site.name}`} width={88} height={88} quality={90} />
               <span>
                 <span className="contact-me-hand">You’ll be talking to me :)</span>
                 <strong>{site.founder}, Founder</strong>

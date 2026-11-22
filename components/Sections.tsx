@@ -189,7 +189,7 @@ export function AuthorBox({ updated, hasPhoto }: { updated: string; hasPhoto: bo
     <aside className="author-box" aria-label="About the author">
       <div className="author-photo">
         {hasPhoto ? (
-          <Image src="/images/ravindra-founder.jpg" alt={site.founder} width={72} height={72} />
+          <Image src="/images/ravindra-founder-hd.jpg" alt={site.founder} width={72} height={72} />
         ) : (
           <span>DR</span>
         )}

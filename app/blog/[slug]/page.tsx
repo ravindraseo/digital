@@ -11,7 +11,7 @@ import { absolute, ogImages, site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
-const hasPhoto = existsSync(path.join(process.cwd(), "public", "images", "ravindra-founder.jpg"));
+const hasPhoto = existsSync(path.join(process.cwd(), "public", "images", "ravindra-founder-hd.jpg"));
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
