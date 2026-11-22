@@ -5,16 +5,16 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { Icon } from "@/components/Icon";
 import { Rich } from "@/components/Rich";
-import { CtaBand, FaqList, JsonLd, ProcessSteps, ServicesBox } from "@/components/Sections";
+import { CtaBand, FaqList, JsonLd, ProcessSteps, PromiseCard, ServicesBox } from "@/components/Sections";
 import { ServiceTabs, type TabData } from "@/components/ServiceTabs";
 import { rankings } from "@/lib/rankings";
 import { BlogSection } from "@/components/BlogCards";
 import { faqSchema, webPageSchema } from "@/lib/schema";
 import { findByHref, getCategory, menuColumns } from "@/lib/services";
-import { site, waLink } from "@/lib/site";
+import { ogImages, site, waLink } from "@/lib/site";
 import type { FAQ, IconName } from "@/lib/types";
 
-const title = "Digital Marketing Agency in Delhi | New Ashok Nagar, East Delhi";
+const title = "Digital Marketing Agency in Delhi | Digital Ravindra";
 const description =
   "Digital marketing agency in New Ashok Nagar, East Delhi: SEO, GMB, AI-search optimisation, Google & Meta ads, websites and apps for Delhi, Noida & NCR.";
 
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: { absolute: title },
   description,
   alternates: { canonical: "/" },
-  openGraph: { title: "Digital Ravindra: Digital Marketing Agency in Delhi", description, url: "/" },
+  openGraph: { title: "Digital Ravindra: Digital Marketing Agency in Delhi", description, url: "/", images: ogImages },
 };
 
 const hasPhoto = existsSync(path.join(process.cwd(), "public", "images", "founder.jpg"));
@@ -552,6 +552,7 @@ export default function Home() {
         </div>
       </section>
 
+      <PromiseCard />
       <BlogSection />
       <FaqList faqs={faqs} />
       <CtaBand />

@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/site";
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { Breadcrumbs, CtaBand, FaqList, JsonLd } from "@/components/Sections";
-import { breadcrumbSchema, faqSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 import { categories, regionalHrefs } from "@/lib/services";
 import type { FAQ } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Our Services — SEO, Ads, Websites & Apps",
+  title: "Our Services: SEO, Ads, Websites & Apps",
   description:
-    "All Digital Ravindra services for Delhi NCR businesses: SEO, local SEO, GMB, Meta & Google Ads, WhatsApp marketing, website, Shopify, WordPress, app and logo design.",
+    "All Digital Ravindra services for Delhi NCR: SEO, local SEO, GMB, Meta & Google Ads, WhatsApp marketing, websites, Shopify, WordPress, apps and logos.",
   alternates: { canonical: "/services" },
+  openGraph: { url: "/services", images: ogImages },
 };
 
 const crumbs = [
@@ -36,7 +38,7 @@ const faqs: FAQ[] = [
 export default function ServicesPage() {
   return (
     <>
-      <JsonLd data={[breadcrumbSchema(crumbs), faqSchema(faqs)]} />
+      <JsonLd data={[webPageSchema({ title: "Our Services: SEO, Ads, Websites & Apps", description: "All Digital Ravindra services for Delhi NCR: SEO, local SEO, GMB, Meta & Google Ads, WhatsApp marketing, websites, Shopify, WordPress, apps and logos.", href: "/services", about: "Digital marketing services", type: "CollectionPage" }), breadcrumbSchema(crumbs), faqSchema(faqs)]} />
       <section className="page-hero">
         <div className="container">
           <Breadcrumbs items={crumbs} />

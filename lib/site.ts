@@ -31,12 +31,17 @@ export const site = {
     "Delhi NCR",
   ],
   hours: "Mon–Sat, 10:00 AM – 7:00 PM",
+  // Paste the full profile URLs here (e.g. https://www.instagram.com/yourhandle). Empty ones are hidden
+  // from the footer and left out of schema sameAs, because generic links confuse Google and AI tools.
   socials: {
-    facebook: "https://facebook.com",
-    instagram: "https://instagram.com",
-    linkedin: "https://linkedin.com",
-  },
+    facebook: "",
+    instagram: "",
+    linkedin: "",
+  } as Record<"facebook" | "instagram" | "linkedin", string>,
 } as const;
+
+/** Shared Open Graph image so every page (not only the home page) gets a share preview. */
+export const ogImages = [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Digital Ravindra, digital marketing agency in Delhi" }];
 
 export function waLink(message = "Hi Digital Ravindra, I'd like to grow my business online.") {
   return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`;

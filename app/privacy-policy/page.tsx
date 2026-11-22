@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Sections";
-import { site } from "@/lib/site";
+import { ogImages, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Digital Ravindra collects, uses and protects information shared through this website, WhatsApp and calls.",
+  description: "How Digital Ravindra collects, uses and protects the information you share through this website, WhatsApp messages and phone calls.",
   alternates: { canonical: "/privacy-policy" },
+  openGraph: { url: "/privacy-policy", images: ogImages },
 };
 
 export default function PrivacyPage() {

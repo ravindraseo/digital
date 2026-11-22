@@ -61,11 +61,13 @@ export function Footer() {
               </a>
             </li>
           </ul>
-          <div className="footer-social">
-            <a href={site.socials.facebook} target="_blank" rel="noopener">Facebook</a>
-            <a href={site.socials.instagram} target="_blank" rel="noopener">Instagram</a>
-            <a href={site.socials.linkedin} target="_blank" rel="noopener">LinkedIn</a>
-          </div>
+          {Object.values(site.socials).some(Boolean) && (
+            <div className="footer-social">
+              {site.socials.facebook && <a href={site.socials.facebook} target="_blank" rel="noopener">Facebook</a>}
+              {site.socials.instagram && <a href={site.socials.instagram} target="_blank" rel="noopener">Instagram</a>}
+              {site.socials.linkedin && <a href={site.socials.linkedin} target="_blank" rel="noopener">LinkedIn</a>}
+            </div>
+          )}
         </div>
       </div>
 

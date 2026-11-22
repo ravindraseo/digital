@@ -4,7 +4,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { Icon } from "./Icon";
 import { Rich } from "./Rich";
-import { AuthorBox, Breadcrumbs, CtaBand, FaqList, JsonLd, ProcessSteps, ServicesBox, ServicesGrid } from "./Sections";
+import { AuthorBox, Breadcrumbs, CtaBand, FaqList, JsonLd, ProcessSteps, ProofStrip, ServicesBox, ServicesGrid } from "./Sections";
 import { breadcrumbSchema, CONTENT_UPDATED, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { findByHref, regionalHrefs } from "@/lib/services";
 import { site, waLink } from "@/lib/site";
@@ -46,12 +46,14 @@ export function ServicePage({ content: c, href, crumbs, hub }: Props) {
   const short = c.name.split(" (")[0];
   const firstHalf = c.sections.slice(0, 2);
   const secondHalf = c.sections.slice(2);
+  // Show real ranking proof where it is relevant evidence (search and Google listing services).
+  const showProof = /seo|gmb|google-business|local|link-building|content/.test(href);
 
   return (
     <>
       <JsonLd
         data={[
-          webPageSchema({ title: c.metaTitle, description: c.metaDescription, href, about: c.name }),
+          { ...webPageSchema({ title: c.metaTitle, description: c.metaDescription, href, about: c.name }), citation: c.external.url },
           serviceSchema({ name: c.name, description: c.metaDescription, href, areas: c.areas }),
           breadcrumbSchema(crumbs),
           faqSchema(c.faqs),
@@ -118,6 +120,8 @@ export function ServicePage({ content: c, href, crumbs, hub }: Props) {
           </div>
         </div>
       </section>
+
+      {showProof && <ProofStrip />}
 
       <section className="section section--tight">
         <div className="container prose-grid">

@@ -110,7 +110,7 @@ export const instagramAds: ServiceContent = {
   icon: "social",
   cardText: "Reels, stories and feed ads designed for how people use Instagram.",
   keyword: "instagram ads agency in delhi",
-  metaTitle: "Instagram Ads Agency in Delhi | Reels & Story Ads That Convert",
+  metaTitle: "Instagram Ads Agency in Delhi | Reels & Story Ads",
   metaDescription:
     "Instagram ads in Delhi: reels, story and feed campaigns with creator-style creative, precise targeting and tracking that turns scrolls into enquiries and sales.",
   eyebrow: "Instagram ads",
@@ -214,7 +214,7 @@ export const linkedinAds: ServiceContent = {
   icon: "briefcase",
   cardText: "B2B lead generation targeting decision-makers by role and industry.",
   keyword: "linkedin marketing agency",
-  metaTitle: "LinkedIn Ads & LinkedIn Marketing Agency | B2B Lead Generation",
+  metaTitle: "LinkedIn Marketing Agency | B2B Leads & LinkedIn Ads",
   metaDescription:
     "LinkedIn ads for B2B lead generation: target decision-makers by job title, company and industry with lead gen forms, thought-leadership content and ABM.",
   eyebrow: "LinkedIn marketing",

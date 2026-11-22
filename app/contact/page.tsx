@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { Icon } from "@/components/Icon";
 import { Breadcrumbs, FaqList, JsonLd, ServicesGrid } from "@/components/Sections";
-import { breadcrumbSchema, faqSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 import { allServices } from "@/lib/services";
-import { site, waLink } from "@/lib/site";
+import { site, waLink, ogImages } from "@/lib/site";
 import type { FAQ } from "@/lib/types";
 
 export const metadata: Metadata = {
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   description:
     "Contact Digital Ravindra in New Ashok Nagar, East Delhi for a free audit of your website, Google Business Profile and marketing. Call, WhatsApp or visit us.",
   alternates: { canonical: "/contact" },
+  openGraph: { url: "/contact", images: ogImages },
 };
 
 const crumbs = [
@@ -30,7 +31,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <JsonLd data={[breadcrumbSchema(crumbs), faqSchema(faqs)]} />
+      <JsonLd data={[webPageSchema({ title: "Contact Digital Ravindra", description: "Contact Digital Ravindra in New Ashok Nagar, East Delhi for a free audit of your website, Google Business Profile and marketing. Call, WhatsApp or visit us.", href: "/contact", about: "Contacting Digital Ravindra", type: "ContactPage" }), breadcrumbSchema(crumbs), faqSchema(faqs)]} />
       <section className="page-hero">
         <div className="container">
           <Breadcrumbs items={crumbs} />

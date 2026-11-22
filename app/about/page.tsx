@@ -3,16 +3,17 @@ import Image from "next/image";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { Icon } from "@/components/Icon";
-import { Breadcrumbs, CtaBand, FaqList, JsonLd, ServicesGrid } from "@/components/Sections";
-import { breadcrumbSchema, faqSchema } from "@/lib/schema";
-import { site, waLink } from "@/lib/site";
+import { Breadcrumbs, CtaBand, FaqList, JsonLd, PromiseCard, ServicesGrid } from "@/components/Sections";
+import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
+import { site, waLink, ogImages } from "@/lib/site";
 import type { FAQ, IconName } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "About Us — The People Behind Digital Ravindra",
+  title: { absolute: "About Digital Ravindra | Meet Founder Ravindra" },
   description:
     "Meet Digital Ravindra: a hands-on digital marketing team helping Delhi NCR businesses grow with honest SEO, ads, websites and apps.",
   alternates: { canonical: "/about" },
+  openGraph: { url: "/about", images: ogImages },
 };
 
 // Drop your photo at public/images/founder.jpg and it appears automatically.
@@ -49,7 +50,7 @@ const faqs: FAQ[] = [
 export default function AboutPage() {
   return (
     <>
-      <JsonLd data={[breadcrumbSchema(crumbs), faqSchema(faqs)]} />
+      <JsonLd data={[webPageSchema({ title: "About Digital Ravindra | Meet Founder Ravindra", description: "Meet Digital Ravindra: a hands-on digital marketing team helping Delhi NCR businesses grow with honest SEO, ads, websites and apps.", href: "/about", about: "Digital Ravindra", type: "AboutPage" }), breadcrumbSchema(crumbs), faqSchema(faqs)]} />
       <section className="page-hero">
         <div className="container">
           <Breadcrumbs items={crumbs} />
@@ -132,6 +133,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <PromiseCard />
       <ServicesGrid title="Here’s how we can help your business" />
       <FaqList faqs={faqs} title="A little more about working with us" />
       <CtaBand title="Let’s have a chai-and-strategy chat" text="Tell us about your business. We’ll share a few honest ideas you can use — whether or not you work with us." />

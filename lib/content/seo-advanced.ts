@@ -108,7 +108,7 @@ export const geo: ServiceContent = {
   icon: "spark",
   cardText: "Get your brand cited inside AI-generated answers and summaries.",
   keyword: "generative engine optimization services",
-  metaTitle: "Generative Engine Optimization (GEO) Services | Digital Ravindra",
+  metaTitle: "GEO Services | Generative Engine Optimization in India",
   metaDescription:
     "GEO services to get your brand cited in ChatGPT, Gemini, Perplexity and Google AI Overviews. Entity building, quotable content and AI mention tracking.",
   eyebrow: "GEO services",
@@ -483,7 +483,7 @@ export const seoAudit: ServiceContent = {
   icon: "search",
   cardText: "A clear, prioritised list of what holds your website back.",
   keyword: "seo audit services in delhi",
-  metaTitle: "SEO Audit Services in Delhi | Website SEO Audit & Action Plan",
+  metaTitle: "SEO Audit Services in Delhi | Website Audit & Action Plan",
   metaDescription:
     "Professional website SEO audit covering technical health, content, keywords, backlinks, local SEO and AI search, delivered as a prioritised action plan.",
   eyebrow: "SEO audit",
@@ -577,7 +577,7 @@ export const linkBuilding: ServiceContent = {
   icon: "link",
   cardText: "Earn relevant, high-quality backlinks that build authority safely.",
   keyword: "link building services",
-  metaTitle: "Link Building Services | White-Hat Backlinks for Indian Businesses",
+  metaTitle: "Link Building Services | White-Hat Backlinks in India",
   metaDescription:
     "White-hat link building services: digital PR, niche outreach, local citations and partnerships that earn relevant backlinks without risking Google penalties.",
   eyebrow: "Link building",

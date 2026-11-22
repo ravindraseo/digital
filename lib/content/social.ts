@@ -7,7 +7,7 @@ export const social: Category = {
   icon: "social",
   cardText: "Instagram, Facebook and LinkedIn content that makes your brand look active and trusted.",
   keyword: "social media marketing company in delhi",
-  metaTitle: "Social Media Marketing Company in Delhi | Instagram & Facebook",
+  metaTitle: "Social Media Marketing Company in Delhi | SMM Agency",
   metaDescription:
     "Social media marketing company in East Delhi: content calendars, reels, community management and paid promotion on Instagram, Facebook and LinkedIn.",
   eyebrow: "Social media marketing · Delhi",

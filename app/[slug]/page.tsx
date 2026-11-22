@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ServicePage } from "@/components/ServicePage";
 import { allPages, getCategory, parentOf } from "@/lib/services";
+import { ogImages } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: p.metaTitle },
     description: p.metaDescription,
     alternates: { canonical: p.href },
-    openGraph: { title: p.metaTitle, description: p.metaDescription, url: p.href, type: "article" },
+    openGraph: { title: p.metaTitle, description: p.metaDescription, url: p.href, type: "article", images: ogImages },
   };
 }
 

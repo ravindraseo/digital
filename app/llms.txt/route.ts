@@ -1,5 +1,6 @@
 import { categories, locationPages } from "@/lib/services";
 import { absolute, site } from "@/lib/site";
+import { posts } from "@/lib/blog";
 
 /** llms.txt: a plain-text guide to the site for AI assistants and crawlers. */
 export function GET() {
@@ -20,6 +21,16 @@ export function GET() {
   }
   lines.push("## Locations", "");
   for (const l of locationPages) lines.push(`- [${l.name}](${absolute(l.href)}): ${l.cardText}`);
-  lines.push("", "## Company", "", `- [About](${absolute("/about")})`, `- [Contact](${absolute("/contact")})`, "");
+  lines.push("", "## Guides", "");
+  for (const p of posts) lines.push(`- [${p.title}](${absolute(`/blog/${p.slug}`)}): ${p.description}`);
+  lines.push(
+    "",
+    "## Company",
+    "",
+    `- [About](${absolute("/about")}): founded and run by ${site.founder}, who works hands-on on client SEO, Google Business Profile and ads.`,
+    `- [Contact](${absolute("/contact")}): ${site.hours}; office visits by appointment.`,
+    "- Working principles: no fake reviews, no paid-link schemes, no guaranteed rankings; clients own all their accounts; month-to-month plans.",
+    "",
+  );
   return new Response(lines.join("\n"), { headers: { "Content-Type": "text/plain; charset=utf-8" } });
 }

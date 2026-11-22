@@ -7,7 +7,7 @@ import { Rich } from "@/components/Rich";
 import { AuthorBox, Breadcrumbs, CtaBand, FaqList, JsonLd } from "@/components/Sections";
 import { getPost, posts } from "@/lib/blog";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
-import { absolute, site } from "@/lib/site";
+import { absolute, ogImages, site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: p.metaTitle },
     description: p.description,
     alternates: { canonical: `/blog/${p.slug}` },
-    openGraph: { title: p.metaTitle, description: p.description, url: `/blog/${p.slug}`, type: "article", publishedTime: p.date },
+    openGraph: { title: p.metaTitle, description: p.description, url: `/blog/${p.slug}`, type: "article", publishedTime: p.date, images: ogImages },
   };
 }
 
@@ -57,6 +57,7 @@ export default async function PostPage({ params }: Props) {
             author: { "@type": "Person", "@id": `${site.url}/#founder`, name: site.founder },
             publisher: { "@id": `${site.url}/#organization` },
             mainEntityOfPage: absolute(href),
+            image: absolute("/opengraph-image"),
           },
           breadcrumbSchema(crumbs),
           faqSchema(p.faqs),

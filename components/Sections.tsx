@@ -4,6 +4,7 @@ import { Icon } from "./Icon";
 import { Rich } from "./Rich";
 import { categories, featuredHrefs, findByHref, locationPages, regionalHrefs } from "@/lib/services";
 import { site, waLink } from "@/lib/site";
+import { rankings } from "@/lib/rankings";
 import type { FAQ, Step } from "@/lib/types";
 
 export function JsonLd({ data }: { data: object | object[] }) {
@@ -202,8 +203,75 @@ export function AuthorBox({ updated, hasPhoto }: { updated: string; hasPhoto: bo
           Nagar, East Delhi. Every page on this site is written from hands-on client work, not copied, and reviewed for
           accuracy before publishing. <Link href="/about">More about us</Link>.
         </p>
+        <details className="standards">
+          <summary>How we write and check this page</summary>
+          <ul>
+            <li>Written from work we do every week for clients in Delhi, Noida and NCR, not rewritten from other sites.</li>
+            <li>Facts about Google, Meta and AI tools are checked against their official help pages, linked where useful.</li>
+            <li>Ranking examples are real positions we can show you on Google, with the date we checked them.</li>
+            <li>No fake reviews, no paid-link schemes and no “guaranteed #1” promises, on this site or for clients.</li>
+            <li>Spotted something out of date? <a href={waLink("Hi, I spotted something on your website that may be out of date.")} target="_blank" rel="noopener">Tell us on WhatsApp</a> and we will fix it.</li>
+          </ul>
+        </details>
       </div>
     </aside>
+  );
+}
+
+/** Experience signal: real client rankings, shown on SEO-related pages. */
+export function ProofStrip() {
+  const top = rankings.items.slice(0, 3);
+  return (
+    <section className="section section--tight" aria-labelledby="proof-title">
+      <div className="container proof">
+        <div className="proof-head">
+          <p className="note-hand">Proof, not promises</p>
+          <h2 id="proof-title">Rankings we hold for clients right now</h2>
+          <p>Checked on Google India, {rankings.checked}. Ask on WhatsApp and we will show you the live results.</p>
+        </div>
+        <ol className="proof-list">
+          {top.map((r) => (
+            <li key={r.keyword}>
+              <span className="proof-pos">#{r.position}</span>
+              <span>
+                <strong>{r.keyword}</strong>
+                <small>
+                  {r.industry} · {r.area}
+                </small>
+              </span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
+}
+
+/** Trust: plain promises, signed, so a business owner knows what to expect. */
+export function PromiseCard() {
+  const promises = [
+    "You talk to me directly, on WhatsApp or a call, not a sales team.",
+    "Every Google, Meta and website login stays in your name. You own it all.",
+    "A short monthly report in plain words: calls, chats and enquiries.",
+    "No long lock-ins. If it is not working, you can stop.",
+    "If a service will not help you, I will tell you before you pay for it.",
+  ];
+  return (
+    <section className="section section--tight" aria-labelledby="promise-title">
+      <div className="container">
+        <div className="promise">
+          <p className="note-hand">My promise to every client</p>
+          <h2 id="promise-title">What you can hold me to</h2>
+          <ol>
+            {promises.map((p) => (
+              <li key={p}>{p}</li>
+            ))}
+          </ol>
+          <p className="promise-hi">Hindi ya English, jisme aap comfortable ho, usi mein baat karenge.</p>
+          <p className="signature">— {site.founder}</p>
+        </div>
+      </div>
+    </section>
   );
 }
 

@@ -122,7 +122,7 @@ export const localSeo: ServiceContent = {
   icon: "pin",
   cardText: "Show up on Google Maps when people nearby search for what you sell.",
   keyword: "local seo services in delhi",
-  metaTitle: "Local SEO Services in Delhi | Rank on Google Maps, East Delhi",
+  metaTitle: "Local SEO Services in Delhi | Rank on Google Maps",
   metaDescription:
     "Local SEO services in Delhi from an East Delhi team. Rank in the Google Maps 3-pack, win “near me” searches and turn nearby searchers into calls and walk-ins.",
   eyebrow: "Local SEO · Delhi & Noida",
@@ -427,7 +427,7 @@ export const gmbGujarat: ServiceContent = {
   keyword: "gmb services in gujarat",
   metaTitle: "GMB Services in Gujarat | Google Business Listing Experts",
   metaDescription:
-    "Google My Business services across Gujarat: listing creation, verification, suspension fixes and optimisation for businesses in Surat, Vadodara, Rajkot and beyond.",
+    "Google My Business services across Gujarat: listing setup, verification, suspension fixes and optimisation for Surat, Vadodara, Rajkot and beyond.",
   eyebrow: "Google Business listing · Gujarat",
   h1: "GMB services in Gujarat for businesses that want to be found on Google Maps",
   lead:

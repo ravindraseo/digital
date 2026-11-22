@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/site";
 import { BlogCards } from "@/components/BlogCards";
 import { Breadcrumbs, CtaBand, JsonLd } from "@/components/Sections";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "SEO & Google Business Profile Guides",
   description:
     "Practical guides on SEO, Google Business Profile, ads and websites for small businesses in Delhi NCR and across India, from the Digital Ravindra team.",
   alternates: { canonical: "/blog" },
+  openGraph: { url: "/blog", images: ogImages },
 };
 
 const crumbs = [
@@ -18,7 +20,7 @@ const crumbs = [
 export default function BlogPage() {
   return (
     <>
-      <JsonLd data={breadcrumbSchema(crumbs)} />
+      <JsonLd data={[webPageSchema({ title: "SEO & Google Business Profile Guides", description: "Practical guides on SEO, Google Business Profile, ads and websites for small businesses in Delhi NCR and across India, from the Digital Ravindra team.", href: "/blog", about: "SEO and Google Business Profile guides", type: "CollectionPage" }), breadcrumbSchema(crumbs)]} />
       <section className="page-hero">
         <div className="container">
           <Breadcrumbs items={crumbs} />

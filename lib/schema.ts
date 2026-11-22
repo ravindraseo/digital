@@ -8,10 +8,10 @@ const stripLinks = (t: string) => t.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
 /** Date shown on pages and used as dateModified. Update when content is revised. */
 export const CONTENT_UPDATED = { iso: "2026-11-22", label: "November 2026" };
 
-export function webPageSchema(p: { title: string; description: string; href: string; about?: string }) {
+export function webPageSchema(p: { title: string; description: string; href: string; about?: string; type?: string }) {
   return {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": p.type ?? "WebPage",
     "@id": `${absolute(p.href)}#webpage`,
     url: absolute(p.href),
     name: p.title,
@@ -20,6 +20,11 @@ export function webPageSchema(p: { title: string; description: string; href: str
     isPartOf: { "@id": `${site.url}/#website` },
     about: p.about ? { "@type": "Thing", name: p.about } : undefined,
     dateModified: CONTENT_UPDATED.iso,
+    lastReviewed: CONTENT_UPDATED.iso,
+    reviewedBy: { "@id": founderId },
+    primaryImageOfPage: { "@type": "ImageObject", url: absolute("/opengraph-image") },
+    // AEO: tells voice assistants which blocks hold the direct answer.
+    speakable: { "@type": "SpeakableSpecification", cssSelector: [".answer-box", ".takeaways"] },
     author: { "@type": "Person", "@id": founderId, name: site.founder, jobTitle: "Founder", worksFor: { "@id": orgId } },
     publisher: { "@id": orgId },
   };
@@ -40,7 +45,13 @@ export function organizationSchema() {
         telephone: site.phoneRaw,
         email: site.email,
         priceRange: "₹₹",
-        founder: { "@type": "Person", "@id": founderId, name: site.founder, image: absolute("/images/founder.jpg") },
+        founder: { "@id": founderId },
+        openingHoursSpecification: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          opens: "10:00",
+          closes: "19:00",
+        },
         address: {
           "@type": "PostalAddress",
           streetAddress: site.address.street,
@@ -75,7 +86,19 @@ export function organizationSchema() {
           areaServed: "IN",
           availableLanguage: ["English", "Hindi"],
         },
-        sameAs: Object.values(site.socials),
+        sameAs: [site.mapsUrl, ...Object.values(site.socials).filter(Boolean)],
+      },
+      {
+        "@type": "Person",
+        "@id": founderId,
+        name: site.founder,
+        jobTitle: "Founder",
+        image: absolute("/images/founder.jpg"),
+        url: absolute("/about"),
+        worksFor: { "@id": orgId },
+        description: `Founder of ${site.name}, a digital marketing agency in New Ashok Nagar, East Delhi. Works hands-on on SEO, Google Business Profile, AI-search optimisation and Google and Meta ads for local businesses.`,
+        knowsAbout: ["SEO", "Local SEO", "Google Business Profile", "Generative Engine Optimization", "Google Ads", "Meta Ads"],
+        knowsLanguage: ["en", "hi"],
       },
       {
         "@type": "WebSite",

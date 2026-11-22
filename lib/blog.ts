@@ -20,7 +20,7 @@ export const posts: Post[] = [
   {
     slug: "google-business-profile-video-verification",
     title: "How to pass Google Business Profile video verification in India",
-    metaTitle: "Google Business Profile Video Verification: Step-by-Step Guide",
+    metaTitle: "Google Business Profile Video Verification Guide",
     description:
       "A practical guide to passing Google Business Profile (GMB) video verification in India: what to record, common rejection reasons and what to do if it fails.",
     category: "Google Business Profile",
@@ -157,7 +157,7 @@ export const posts: Post[] = [
     title: "How much does SEO cost in Delhi? What you are really paying for",
     metaTitle: "How Much Does SEO Cost in Delhi? A Plain-English Guide",
     description:
-      "What decides the cost of SEO in Delhi, what a fair monthly plan includes, red flags in cheap packages and how to judge whether SEO is worth it for your business.",
+      "What decides SEO cost in Delhi, what a fair monthly plan includes, red flags in cheap packages and how to judge whether SEO is worth it for your business.",
     category: "SEO",
     icon: "search",
     date: "2026-11-05",

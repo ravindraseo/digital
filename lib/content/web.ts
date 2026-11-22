@@ -13,7 +13,7 @@ const websiteDesign: ServiceContent = {
   icon: "pen",
   cardText: "Clean, modern designs that make your business look as good as it is.",
   keyword: "website designing company in delhi",
-  metaTitle: "Website Designing Company in Delhi | Modern, Responsive Design",
+  metaTitle: "Website Designing Company in Delhi | Responsive Design",
   metaDescription:
     "Website designing company in East Delhi creating clean, responsive, conversion-focused websites for small businesses, startups and brands across Delhi NCR.",
   eyebrow: "Website designing · Delhi",
@@ -313,7 +313,7 @@ const woo: ServiceContent = {
   icon: "cart",
   cardText: "Flexible WordPress stores with full control over your data and costs.",
   keyword: "woocommerce development company",
-  metaTitle: "WooCommerce Development Company | WordPress E-commerce Experts",
+  metaTitle: "WooCommerce Development Company | WordPress Stores",
   metaDescription:
     "WooCommerce development for Indian businesses: custom WordPress stores, payment gateways, shipping, speed optimisation, migrations and ongoing support.",
   eyebrow: "WooCommerce development",
@@ -413,7 +413,7 @@ const laravel: ServiceContent = {
   icon: "code",
   cardText: "Custom web applications, portals and APIs built on Laravel.",
   keyword: "laravel development company in delhi",
-  metaTitle: "Laravel Development Company in Delhi | Custom Web Applications",
+  metaTitle: "Laravel Development Company in Delhi | Custom Web Apps",
   metaDescription:
     "Laravel development in Delhi: custom web applications, admin panels, portals, APIs and SaaS products built securely and maintainably on the Laravel framework.",
   eyebrow: "Laravel development",
@@ -715,7 +715,7 @@ const maintenance: ServiceContent = {
   keyword: "website maintenance services in delhi",
   metaTitle: "Website Maintenance Services in Delhi | Updates & Backups",
   metaDescription:
-    "Website maintenance services in Delhi: updates, backups, security monitoring, speed checks, uptime alerts and content changes for WordPress, Shopify and custom sites.",
+    "Website maintenance in Delhi: updates, backups, security monitoring, speed checks, uptime alerts and content changes for WordPress, Shopify and custom sites.",
   eyebrow: "Website maintenance",
   h1: "Website maintenance services in Delhi to keep your site fast, safe and up to date",
   lead:
@@ -816,7 +816,7 @@ export const web: Category = {
   icon: "code",
   cardText: "Fast, mobile-first websites on WordPress, Shopify, Laravel or custom code.",
   keyword: "website development company in delhi",
-  metaTitle: "Website Development Company in Delhi | Fast, SEO-Ready Websites",
+  metaTitle: "Website Development Company in Delhi | SEO-Ready Sites",
   metaDescription:
     "Website development company in East Delhi building fast, mobile-first business websites, WordPress and Shopify stores and custom Laravel applications.",
   eyebrow: "Website development · Delhi",

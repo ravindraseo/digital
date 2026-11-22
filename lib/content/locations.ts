@@ -107,7 +107,7 @@ export const gurgaon: ServiceContent = {
   icon: "pin",
   cardText: "SEO and performance marketing for Gurugram startups and businesses.",
   keyword: "seo company in gurugram",
-  metaTitle: "SEO Company in Gurugram | SEO Services for Gurugram Businesses",
+  metaTitle: "SEO Company in Gurugram | Local SEO for Gurugram Firms",
   metaDescription:
     "SEO company in Gurugram serving startups, clinics and B2B firms: technical SEO, content, local SEO, Google Ads and LinkedIn campaigns from a Delhi team.",
   eyebrow: "SEO company · Gurugram",
