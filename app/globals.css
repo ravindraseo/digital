@@ -872,3 +872,21 @@ h3 { font-weight: 650; letter-spacing: -0.005em; }
   .proof { grid-template-columns: 1fr; }
   .promise { transform: none; }
 }
+
+/* ============ v12: founder photo + experience ============ */
+/* Photo source is 640px; cap the frame so it never upscales into blur. */
+.founder-photo { max-width: 340px; }
+.founder-photo img { image-rendering: auto; }
+.founder-facts { list-style: none; margin: 4px 0 18px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.founder-facts li { background: #fff; border: 1.5px solid var(--ink-line); border-radius: 12px; box-shadow: 2px 2px 0 var(--ink-line); padding: 10px 14px; font-size: 0.93rem; color: var(--muted); line-height: 1.35; }
+.founder-facts strong { display: block; color: var(--navy); font-size: 1rem; }
+.contact-me { display: flex; align-items: center; gap: 16px; background: #fff9e8; border: 1.5px solid var(--ink-line); border-radius: var(--radius); box-shadow: var(--sticker); padding: 14px 18px; transform: rotate(-0.5deg); }
+.contact-me img { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; box-shadow: 0 0 0 1.5px var(--ink-line); flex-shrink: 0; }
+.contact-me-hand { display: block; font: 700 1.15rem/1.2 var(--hand); color: var(--orange); }
+.contact-me strong { display: block; color: var(--navy); font-size: 1.05rem; }
+.contact-me small { color: var(--muted); font-size: 0.86rem; line-height: 1.35; display: block; }
+@media (max-width: 620px) {
+  .founder-facts { grid-template-columns: 1fr; }
+  .contact-me { transform: none; }
+}
+.prose .signature { display: block; width: max-content; margin-bottom: 14px; }

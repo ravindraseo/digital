@@ -4,6 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
+  // 90 is used for the founder photo so the face stays sharp.
+  images: { qualities: [75, 90] },
   async redirects() {
     return [
       // Old nested service URLs -> keyword permalinks

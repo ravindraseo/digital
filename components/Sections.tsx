@@ -189,7 +189,7 @@ export function AuthorBox({ updated, hasPhoto }: { updated: string; hasPhoto: bo
     <aside className="author-box" aria-label="About the author">
       <div className="author-photo">
         {hasPhoto ? (
-          <Image src="/images/founder.jpg" alt={site.founder} width={72} height={72} />
+          <Image src="/images/ravindra-founder.jpg" alt={site.founder} width={72} height={72} />
         ) : (
           <span>DR</span>
         )}
@@ -199,8 +199,9 @@ export function AuthorBox({ updated, hasPhoto }: { updated: string; hasPhoto: bo
           Written and reviewed by <strong>{site.founder}</strong>, Founder of {site.name} · Updated {updated}
         </p>
         <p>
-          {site.founder} leads SEO, Google Business Profile and paid ads work at {site.name} from our office in New Ashok
-          Nagar, East Delhi. Every page on this site is written from hands-on client work, not copied, and reviewed for
+          {site.founder} ({site.founderProfile.education}, {site.founderProfile.graduated}) has {site.founderProfile.experienceYears} years of
+          experience in digital marketing and WordPress, and leads SEO, Google Business Profile and paid ads work at {site.name} from
+          our office in New Ashok Nagar, East Delhi. Every page on this site is written from hands-on client work, not copied, and reviewed for
           accuracy before publishing. <Link href="/about">More about us</Link>.
         </p>
         <details className="standards">

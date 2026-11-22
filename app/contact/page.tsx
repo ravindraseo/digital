@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ContactForm } from "@/components/ContactForm";
 import { Icon } from "@/components/Icon";
 import { Breadcrumbs, FaqList, JsonLd, ServicesGrid } from "@/components/Sections";
@@ -47,6 +48,16 @@ export default function ContactPage() {
       <section className="section">
         <div className="container contact-grid">
           <div className="contact-cards">
+            <div className="contact-me">
+              <Image src="/images/ravindra-founder.jpg" alt={`${site.founder}, founder of ${site.name}`} width={88} height={88} quality={90} />
+              <span>
+                <span className="contact-me-hand">You’ll be talking to me :)</span>
+                <strong>{site.founder}, Founder</strong>
+                <small>
+                  {site.founderProfile.experienceYears} years in digital marketing &amp; WordPress · {site.founderProfile.education} ({site.founderProfile.graduated}) · Delhi
+                </small>
+              </span>
+            </div>
             <a className="contact-card" href={waLink()} target="_blank" rel="noopener">
               <span className="service-icon"><Icon name="whatsapp" /></span>
               <span><strong>WhatsApp</strong><span>Fastest way to reach us</span></span>

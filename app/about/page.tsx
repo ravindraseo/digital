@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   openGraph: { url: "/about", images: ogImages },
 };
 
-// Drop your photo at public/images/founder.jpg and it appears automatically.
-const PHOTO = "/images/founder.jpg";
+// Drop your photo at public/images/ravindra-founder.jpg and it appears automatically.
+const PHOTO = "/images/ravindra-founder.jpg";
 const hasPhoto = existsSync(path.join(process.cwd(), "public", PHOTO));
 
 const crumbs = [
@@ -71,7 +71,8 @@ export default function AboutPage() {
                 src={PHOTO}
                 alt={`${site.founder}, founder of ${site.name}`}
                 fill
-                sizes="(max-width: 960px) 100vw, 560px"
+                sizes="340px"
+                quality={90}
                 style={{ objectFit: "cover" }}
                 priority
               />
@@ -99,6 +100,21 @@ export default function AboutPage() {
               That frustrated me, because the fundamentals aren’t a secret: a well-kept Google listing, a fast website,
               content that answers real questions, and ads aimed at people who are ready to buy.
             </p>
+            <p>
+              A bit about me: I completed my {site.founderProfile.education} in {site.founderProfile.graduated} and have
+              spent the last {site.founderProfile.experienceYears} years working in digital marketing, first in
+              digital marketing jobs and now with my own clients. My day-to-day is SEO, Google Business Profile, Google
+              and Meta ads, and building and fixing WordPress websites. What clients value most is simple: I keep them
+              in the loop, explain things clearly and reply when they message.
+            </p>
+            <ul className="founder-facts" aria-label={`About ${site.founder}`}>
+              <li><strong>{site.founderProfile.experienceYears} years</strong>In digital marketing</li>
+              <li><strong>{site.founderProfile.education}</strong>Completed {site.founderProfile.graduated}</li>
+              <li><strong>WordPress</strong>Websites: build, speed and fixes</li>
+              <li><strong>SEO, GMB, Google &amp; Meta ads</strong>Hands-on, every week</li>
+              <li><strong>Clear communication</strong>On WhatsApp or a call</li>
+              <li><strong>Based in Delhi</strong>New Ashok Nagar office</li>
+            </ul>
             <p>
               So I started Digital Ravindra to do that work properly and explain it simply. Today we help businesses
               in Delhi and across NCR with SEO, Google Business Profiles, paid ads, WhatsApp marketing,

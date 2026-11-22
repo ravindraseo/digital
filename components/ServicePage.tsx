@@ -10,7 +10,7 @@ import { findByHref, regionalHrefs } from "@/lib/services";
 import { site, waLink } from "@/lib/site";
 import type { Category, Section, ServiceContent } from "@/lib/types";
 
-const hasPhoto = existsSync(path.join(process.cwd(), "public", "images", "founder.jpg"));
+const hasPhoto = existsSync(path.join(process.cwd(), "public", "images", "ravindra-founder.jpg"));
 
 type Props = {
   content: ServiceContent;
@@ -68,7 +68,7 @@ export function ServicePage({ content: c, href, crumbs, hub }: Props) {
             <h1>{c.h1}</h1>
             <p className="lead">{c.lead}</p>
             <p className="byline">
-              {hasPhoto && <Image src="/images/founder.jpg" alt="" width={36} height={36} className="byline-face" />}
+              {hasPhoto && <Image src="/images/ravindra-founder.jpg" alt="" width={36} height={36} className="byline-face" />}
               <span>
                 <span className="byline-hand">written by {site.founder}</span>
                 Updated <time dateTime={CONTENT_UPDATED.iso}>{CONTENT_UPDATED.label}</time>

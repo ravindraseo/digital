@@ -31,6 +31,13 @@ export const site = {
     "Delhi NCR",
   ],
   hours: "Mon–Sat, 10:00 AM – 7:00 PM",
+  // Founder background (E-E-A-T). Keep these exactly as the founder states them.
+  founderProfile: {
+    education: "BSc IT",
+    graduated: 2014,
+    experienceYears: 8,
+    skills: ["SEO", "Local SEO", "Google Business Profile", "Google Ads", "Meta Ads", "WordPress websites"],
+  },
   // Paste the full profile URLs here (e.g. https://www.instagram.com/yourhandle). Empty ones are hidden
   // from the footer and left out of schema sameAs, because generic links confuse Google and AI tools.
   socials: {
